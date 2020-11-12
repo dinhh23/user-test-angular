@@ -1,0 +1,23 @@
+<div>
+<h2>User List</h2>
+
+<table class="table table-bordered table-dark">
+<tr>
+    <th>ID</th>
+    <th>UserName</th>
+    <th>Name</th>
+    <th>Reviewer?</th>
+    <th>Actions</th>
+</tr>
+<tr *ngFor="let user of users">
+    <td>{{ user.id }} </td>
+    <td>{{ user.userName }} </td>
+    <td>{{ user.firstName}} {{ user.lastName}} </td>
+    <td>{{ user.reviewer ? "Y" : "N"}} </td>
+    <td>
+        <a routerLink="/users/edit/{{user.id}}">Edit</a>
+    </td>
+</tr>
+
+</table>
+</div>
